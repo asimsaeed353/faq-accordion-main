@@ -1,0 +1,150 @@
+:root{
+    /* Colors */
+    --col-white : hsl(0, 0%, 100%);
+    --col-light-pink : hsl(275, 100%, 97%);
+    /* --col-gray-purple : hsl(292, 16%, 49%); */
+    --col-gray-purple : hsla(281, 83%, 54%, 1);
+    --col-dark-purple : hsl(292, 42%, 14%);
+
+    /* Typography */
+
+    --fs : 1rem;
+
+    --ff-wsans : 'Work Sans';
+
+    --fw-400 : 400;
+    --fw-600 : 600;
+    --fw-700 : 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-wsans);
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: var(--col-light-pink);
+    color: var(--col-dark-purple);
+    /* word-spacing: -2px;
+    letter-spacing: -0.3px; */
+}
+
+.pattern{
+    height: 50%;
+    width: 100%;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-position: center;
+    background-size: cover
+}
+
+.main{
+    padding: 1em 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--col-white);
+    width: 45%;
+    min-height: 50%;
+    max-height: 75%;
+    border-radius: 10px;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.139);
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.faq-heading{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+}
+
+.faq-heading h1{
+    font-size: 2.5em;
+}
+
+.faq-heading img{
+    width: 2em;
+    height: 2em;
+}
+
+.faq-box{
+    min-width: 100%;
+}
+
+.faq-card{
+    margin-bottom: 1em;
+}
+
+.plus-icon{
+    cursor: pointer;
+}
+
+.minus-icon{
+    display: none;
+}
+
+.faq-question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    min-height: 20%;
+    cursor: pointer;
+}
+
+.faq-question a{
+    font-size: 0.9rem;
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    color: var(--col-dark-purple);
+}
+
+.faq-question a:hover{
+    color: var(--col-gray-purple);
+}
+
+.faq-answer{
+    display: none;
+}
+
+.faq-answer p{
+    font-size: 0.85rem;
+    color: rgb(137, 137, 137);
+    font-weight: var(--fw-400);
+}
+
+@media  (max-width: 50rem) {
+    .main{
+        min-width: 90%;
+        min-height: fit-content;
+        max-height: fit-content;
+    }
+
+    .container{
+        max-height: fit-content;
+    }
+
+    .faq-question{
+        margin-bottom: 0.5em;
+    }
+
+    .faq-heading h1{
+        font-size: 2rem;
+    }
+}
